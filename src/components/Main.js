@@ -20,15 +20,15 @@ const Main = () => {
 
   //console.log(movie);
 
-  // const truncateMovieDetails = (str, num) => {
-  //   if(str?.length > num)
-  //   {
-  //     return str.slice(0, num)+'...';
-  //   }
-  //   else{
-  //     return str;
-  //   }
-  // }
+  const truncateMovieDetails = (str, num) => {
+    if(str?.length > num)
+    {
+      return str.slice(0, num)+'...';
+    }
+    else{
+      return str;
+    }
+  }
 
   return (
     <div className="w-full h-[550px] text-white">
@@ -52,8 +52,8 @@ const Main = () => {
             </button>
           </div>
           <p className="text-gray-400 text-sm"><span className="text-gray-200">Released: </span>{movie?.release_date}</p>
-          {/* <p className="text-gray-200 w-full md:max-w-[70%] lg:max-w-[50%] xl:max-w-[35%]">{truncateMovieDetails(movie?.overview, 150)}</p> */}
-          <p className="text-gray-200 w-full md:max-w-[70%] lg:max-w-[50%] xl:max-w-[35%]">{movie?.overview}</p>
+          <p className="text-gray-200 w-full md:max-w-[70%] lg:max-w-[50%] xl:max-w-[35%]">{truncateMovieDetails(movie?.overview, 150)}</p>
+          {/* <p className="text-gray-200 w-full md:max-w-[70%] lg:max-w-[50%] xl:max-w-[35%]">{movie?.overview}</p> */}
         </div>
       </div>
     </div>
