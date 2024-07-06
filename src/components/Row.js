@@ -38,7 +38,7 @@ const Row = ({ title, fetchURL, slideId }) => {
           id={"slider" + slideId}
           className="w-full h-full overflow-x-scroll scroll-smooth scrollbar-hide whitespace-nowrap"
         >
-          {moviesList.map((item, id) => (
+          {moviesList.filter(item => item.backdrop_path !== null).map((item, id) => (
             <Movie key={id} item={item} />
           ))}
         </div>
